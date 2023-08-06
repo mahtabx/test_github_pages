@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    label[for="roles"] {
+      font-size: 18px; /* Adjust the font size to your preference */
+    }
+  </style>
+  <script>
+    const downloadLinks= {
+      "a": "https://google.com/a",
+      "b": "https://bing.com/b",
+      "c": "https://google.com/c",
+      "d": "https://google.com/d"
+    }
+    function onDownloadClick() {
+      const role = document.getElementById("roles").value;
+      window.open(downloadLinks[role])
+    }
+  </script>
+</head>
+
+<body>
+   <label for="roles">Rolle auswählen:</label>
+
+<select name="roles" id="roles">
+  <option value="a">A</option>
+  <option value="b">B</option>
+  <option value="c">C</option>
+  <option value="D">D</option>
+</select>
+  <input type="button" value="Download" onClick="onDownloadClick()"/>
+
+</body>
+</html>
